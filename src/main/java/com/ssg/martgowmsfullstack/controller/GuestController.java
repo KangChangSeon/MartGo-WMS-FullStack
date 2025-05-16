@@ -11,7 +11,7 @@ public class GuestController {
 
     private final RentCleanupService rentCleanupService;
 
-    @GetMapping("/guest")
+    @GetMapping("/")
     public String guestPage() {
         rentCleanupService.cleanupExpiredRentData();
         return "pages-guest"; // → /WEB-INF/views/pages-guest.jsp
